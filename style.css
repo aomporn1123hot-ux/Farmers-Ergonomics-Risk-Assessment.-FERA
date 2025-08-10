@@ -1,0 +1,67 @@
+body {
+  font-family: "sans-serif";
+  margin: 16px;
+  background-color: #f9f9f9;
+  font-size: 32px; /* เดิม 16px → เพิ่มอีก 1 เท่า */
+}
+
+.cover-img {
+  width: 100%;
+  max-width: 560px; /* เดิม 480px → ขยายเล็กน้อย */
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  color: #2a4d4d;
+  font-size: 40px; /* เดิม 20px → เพิ่มอีก 1 เท่า */
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.image-option {
+  border: 0.5mm solid lightgreen;
+  padding: 4px;
+  width: 32%; /* คง 3 รูปต่อ 1 แถว */
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 28px; /* เดิม 14px → เพิ่มอีก 1 เท่า */
+}
+
+.image-option img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-buttons {
+  margin-top: 16px;
+  text-align: center;
+}
+
+button {
+  padding: 16px 32px; /* เดิม 8px 16px → เพิ่มอีก 1 เท่า */
+  margin: 4px;
+  font-size: 32px; /* เดิม 16px → เพิ่มอีก 1 เท่า */
+}
+
+#resultImage {
+  max-width: 100%;
+  height: auto;
+  border: 0.5mm solid lightgreen;
+  display: block;
+  margin: 8px auto;
+  max-height: 640px; /* เดิม 320px → เพิ่มอีก 1 เท่า */
+}
