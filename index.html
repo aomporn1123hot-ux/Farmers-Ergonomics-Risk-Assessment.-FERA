@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แบบประเมินความเสี่ยง</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="ภาพปก.png" alt="ภาพปก" class="cover-img">
+
+  <form id="assessmentForm">
+    <!-- หน้า 0 -->
+    <div class="page active" id="page0">
+      <h2>ข้อ 1: เลือกท่าทางการทำงานส่วนบน</h2>
+      <div id="upperPostureOptions" class="image-grid"></div>
+      <div class="nav-buttons">
+        <button type="button" onclick="nextUpperTimePage()">ถัดไป</button>
+      </div>
+    </div>
+
+    <!-- หน้า 1: ข้อ 2 -->
+    <div class="page" id="page1"></div>
+
+    <!-- หน้า 2: ข้อ 3 -->
+    <div class="page" id="page2">
+      <h2>ข้อ 3: เลือกท่าทางการทำงานส่วนล่าง</h2>
+      <div id="lowerPostureOptions" class="image-grid"></div>
+      <div class="nav-buttons">
+        <button type="button" onclick="prevPage()">ย้อนกลับ</button>
+        <button type="button" onclick="nextLowerTimePage()">ถัดไป</button>
+      </div>
+    </div>
+
+    <!-- หน้า 3: ข้อ 4 -->
+    <div class="page" id="page3"></div>
+
+    <!-- หน้า 4: ข้อ 5-7 -->
+    <div class="page" id="page4">
+      <h2>ข้อ 5: การออกแรง</h2>
+      <label><input type="radio" name="force" value="1"> น้อยกว่า 5 กิโลกรัม</label><br>
+      <label><input type="radio" name="force" value="2"> 5–10 กิโลกรัม</label><br>
+      <label><input type="radio" name="force" value="3"> มากกว่า 10 กิโลกรัม</label><br>
+
+      <h2>ข้อ 6: การทำงานซ้ำ ๆ</h2>
+      <label><input type="radio" name="repetition" value="1"> มากกว่า 4 ครั้งใน 1 นาที</label><br>
+      <label><input type="radio" name="repetition" value="0"> น้อยกว่า 4 ครั้งใน 1 นาที</label><br>
+
+      <h2>ข้อ 7: การบิด/หมุน</h2>
+      <label><input type="radio" name="twist" value="1"> มีการบิด/หมุน ข้อมือหรือคอ</label><br>
+      <label><input type="radio" name="twist" value="0"> ไม่มีการบิด/หมุน</label><br>
+
+      <div class="nav-buttons">
+        <button type="button" onclick="prevPage()">ย้อนกลับ</button>
+        <button type="submit">ประมวลผล</button>
+      </div>
+    </div>
+
+    <!-- หน้า 5: แสดงผล -->
+    <div class="page" id="page5">
+      <h2>ผลการประเมิน</h2>
+      <p id="resultText"></p>
+      <img id="resultImage" src="" alt="ผลการประเมิน">
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
